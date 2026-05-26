@@ -1,0 +1,24 @@
+# ── CLEF 2026 Task 1 — Config ─────────────────────────────────────────────
+# Edit here instead of changing the notebook.
+
+# Experiment tag — namespaces all output sub-folders under data/
+model_tag: "harrier-jina-top50"
+
+# Gated HuggingFace dataset
+hf_dataset: "sschellhammer/CT26_Task1_SourceRetrievalForScientificWebClaims"
+
+# Languages
+langs:
+  - en
+  - de
+  - fr
+
+# Models
+retriever_model: "microsoft/harrier-oss-v1-27b"
+reranker_model:  "jinaai/jina-reranker-v3"
+
+# Retrieval settings
+top_k_retrieve:   50
+top_k_rerank:     50
+top_k_eval:        5
+retriever_batch: 128
